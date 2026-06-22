@@ -13,6 +13,20 @@ import PageSchema from '../components/PageSchema.astro';
     offers: { price: "0", currency: "USD" },
     aggregateRating: { value: "4.8", count: "127" },
   }} />
+  <!-- Pricing offers schema (all plans) -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "InkFlow Plans",
+    "brand": { "@type": "Brand", "name": "InkFlow" },
+    "description": "Free for solo artists. Starter $9.99/mo, Pro $29.99/mo, Plus $49.99/mo.",
+    "offers": [
+      { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "Forever free for 1 artist, basic manual tools" },
+      { "@type": "Offer", "name": "Starter", "price": "9.99", "priceCurrency": "USD", "description": "Online booking, digital waivers, CRM, SMS reminders, free website page" },
+      { "@type": "Offer", "name": "Pro", "price": "29.99", "priceCurrency": "USD", "description": "Up to 5 artists, commission splitting, aftercare automation, inventory, 10-page website" },
+      { "@type": "Offer", "name": "Plus", "price": "49.99", "priceCurrency": "USD", "description": "Multi-location, cross-shop analytics, custom domain, unlimited website pages" },
+    ]
+  })} />
   <Navbar />
 
   <!-- HERO -->
