@@ -33,6 +33,16 @@ import NoShowCalculator from '../../components/NoShowCalculator.astro';
       <p>Every no-show doesn't just lose the appointment revenue — it wastes the artist's time, blocks a slot that could have gone to a paying client, and disrupts the entire day's schedule. For a studio with 5 artists averaging $150 per session, a single no-show costs $750 in lost billable time. Industry data shows most studios lose between 10-30% of booked appointments to no-shows — that's <strong>$12,000-$50,000 per year</strong> in lost revenue for an average shop.</p>
       <p>The good news? Studios that implement a deposit-first booking system consistently cut no-shows to under 5%. Here's exactly how to do it.</p>
 
+      <!-- 内嵌数据图：No-Show Cost Calculator -->
+      <div class="my-8 rounded-xl border border-ink-800 bg-ink-900/50 p-6">
+        <p class="text-sm font-semibold text-white mb-4">📊 No-Show Cost Calculator: What Each No-Show Really Costs</p>
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div class="rounded-lg bg-ink-800/50 p-3"><p class="text-2xl font-bold text-accent-400">$750</p><p class="text-xs text-gray-500">Lost billable time per no-show (5 artists × $150)</p></div>
+          <div class="rounded-lg bg-ink-800/50 p-3"><p class="text-2xl font-bold text-accent-400">$12K</p><p class="text-xs text-gray-500">Annual loss for average studio</p></div>
+          <div class="rounded-lg bg-ink-800/50 p-3"><p class="text-2xl font-bold text-accent-400">80%</p><p class="text-xs text-gray-500">No-show reduction with deposits</p></div>
+        </div>
+      </div>
+
       <h2>1. Require Deposits at Booking — The #1 Strategy</h2>
       <p>This single change has the biggest impact. Requiring a financial commitment at the time of booking reduces no-shows by up to 80%. When a client has money on the line, they show up.</p>
       <p>How to set deposit amounts that work:</p>
@@ -48,7 +58,7 @@ import NoShowCalculator from '../../components/NoShowCalculator.astro';
         <li><strong>2 reschedules max</strong> — after that, a new deposit is required</li>
         <li><strong>15-minute late arrival clause</strong> — late arrival may result in shortened session or forfeiture</li>
       </ul>
-      <p><a href="/features/payments" class="text-accent-400 hover:underline">InkFlow's payment system</a> collects deposits automatically through Stripe at the time of booking. No manual follow-up required.</p>
+      <p><a href="/features/tattoo-payment-processing" class="text-accent-400 hover:underline">InkFlow's payment system</a> collects deposits automatically through Stripe at the time of booking. No manual follow-up required.</p>
 
       <h2>2. The 3-1-0 Reminder Cadence</h2>
       <p>SMS reminders have a 98% open rate — far higher than email. The most effective studios use a three-reminder system:</p>
@@ -79,7 +89,7 @@ import NoShowCalculator from '../../components/NoShowCalculator.astro';
       <p>Keep your waitlist warm by sending occasional "We had a cancellation this week" messages. Clients appreciate the opportunity to book earlier than expected.</p>
 
       <h2>6. Track and Flag Repeat Offenders</h2>
-      <p>If a client no-shows once, it happens. Twice, it's a pattern. Use your <a href="/features/crm" class="text-accent-400 hover:underline">CRM system</a> to:</p>
+      <p>If a client no-shows once, it happens. Twice, it's a pattern. Use your <a href="/features/tattoo-crm-software" class="text-accent-400 hover:underline">CRM system</a> to:</p>
       <ul>
         <li>Track no-show frequency per client</li>
         <li>Auto-flag clients after their second no-show</li>
@@ -212,7 +222,7 @@ import NoShowCalculator from '../../components/NoShowCalculator.astro';
           <p class="text-sm font-medium text-white group-hover:text-accent-300">No-Show Cost Calculator</p>
           <p class="text-xs text-gray-500 mt-1">Calculate your annual loss</p>
         </a>
-        <a href="/features/payments" class="rounded-xl border border-ink-800 p-4 hover:border-accent-500/30 transition-all group">
+        <a href="/features/tattoo-payment-processing" class="rounded-xl border border-ink-800 p-4 hover:border-accent-500/30 transition-all group">
           <p class="text-sm font-medium text-white group-hover:text-accent-300">Deposit & Payments</p>
           <p class="text-xs text-gray-500 mt-1">Collect deposits automatically</p>
         </a>

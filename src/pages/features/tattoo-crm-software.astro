@@ -3,11 +3,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SEOHead from '../../components/SEOHead.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
+import FAQSchema from '../../components/FAQSchema.astro';
 import StudioHealthQuiz from '../../components/StudioHealthQuiz.astro';
 ---
 
 <BaseLayout>
-  <SEOHead slot="head" title="Tattoo CRM Software — Client Management for Studios" description="Tattoo client management software with 360° client history, smart segmentation, referral tracking, and automated follow-ups. Stop using spreadsheets. Start free." />
+  <FAQSchema questions={[
+    { question: "What client data does InkFlow CRM store?", answer: "Full client history — appointments, waivers, photos, payments, preferences, medical history, and referral sources. Searchable by name, phone, or email." },
+    { question: "Can I segment clients by tattoo style?", answer: "Yes. Tag clients by style preference, visit frequency, or lifetime value. Filter and message specific groups in one click." },
+    { question: "Does the CRM track referral sources automatically?", answer: "Yes. Every new client is tagged with their referral source. Track conversion rates by referrer and see who sends the most business." },
+    { question: "How is InkFlow CRM different from HubSpot?", answer: "HubSpot needs heavy customization for tattoo studios. InkFlow understands tattoo workflows out of the box — photo storage per client, waiver tracking, aftercare automation." },
+  ]} />
   <Navbar />
 
   <!-- HERO: GEO首句即答案 -->
@@ -55,7 +61,13 @@ import StudioHealthQuiz from '../../components/StudioHealthQuiz.astro';
         <div class="grid gap-8 md:grid-cols-2 items-center">
           <div>
             <h3 class="text-2xl font-bold text-white">360° Client History Links Every Appointment, Waiver, Photo, and Payment</h3>
-            <p class="mt-4 text-gray-400">Every interaction is linked to the client profile and searchable by name, phone, or email. Past tattoos, preferences, medical history, and waivers are all visible instantly. No more asking "have you been here before?"</p>
+            <p class="mt-4 text-gray-400">Every interaction is linked to the client profile and searchable by name, phone, or email. Past tattoos, preferences, medical history, and waivers are all visible instantly.</p>
+            <h4 class="mt-4 text-lg font-semibold text-white">Searchable Client Profiles with 5+ Year History Retention</h4>
+            <p class="text-sm text-gray-400">Search by name, phone, or email. Every appointment, waiver, photo, and payment is linked to the client profile. Past tattoos, preferences, and medical history visible at a glance.</p>
+            <h5 class="mt-3 text-base font-medium text-white">Vs HubSpot: Built for Tattoo Data Types</h5>
+            <p class="text-sm text-gray-400">HubSpot needs custom objects for tattoo-specific fields like body placement, ink colors, and session duration. InkFlow's data model understands tattoo workflows out of the box.</p>
+            <h6 class="mt-2 text-sm font-medium text-gray-400">Example: Body Placement Search</h6>
+            <p class="text-sm text-gray-400">Search "all clients with forearm tattoos done in 2025" in one query. HubSpot requires custom report building. Sheets requires manual filtering through hundreds of rows.</p>
           </div>
           <div class="rounded-xl bg-ink-900/50 border border-ink-800 p-8 text-center">
             <p class="text-sm text-gray-400">[Screenshot: Client profile]</p>
@@ -68,14 +80,26 @@ import StudioHealthQuiz from '../../components/StudioHealthQuiz.astro';
           </div>
           <div class="order-1 md:order-2">
             <h3 class="text-2xl font-bold text-white">Smart Tags & Segmentation Let You Target Specific Client Groups</h3>
-            <p class="mt-4 text-gray-400">Tag clients by style preference, visit frequency, or lifetime value. Filter and message specific groups — send a flash sale to everyone who loves traditional work, or a re-engagement campaign to clients who haven't visited in 6 months.</p>
+            <p class="mt-4 text-gray-400">Tag clients by style preference, visit frequency, or lifetime value. Filter and message specific groups — send a flash sale to everyone who loves traditional work.</p>
+            <h4 class="mt-4 text-lg font-semibold text-white">Multi-Dimension Segmentation: Style × Frequency × Value</h4>
+            <p class="text-sm text-gray-400">Combine tags for precise targeting. "Traditional style + not visited in 6 months + spent >$500" — send a re-engagement offer for their next traditional piece.</p>
+            <h5 class="mt-3 text-base font-medium text-white">Vs Sheets: Real-Time Auto-Classification</h5>
+            <p class="text-sm text-gray-400">Sheets requires you to manually update tags after every visit. InkFlow auto-classifies clients based on booking history — frequency, spend, preferred style, and referral chain.</p>
+            <h6 class="mt-2 text-sm font-medium text-gray-400">Automated Re-Engagement Campaigns</h6>
+            <p class="text-sm text-gray-400">Set rules: "If not visited in 3 months → send re-engagement SMS." "If flagged as high-value + not visited in 6 months → send VIP offer." Runs on autopilot.</p>
           </div>
         </div>
 
         <div class="grid gap-8 md:grid-cols-2 items-center">
           <div>
             <h3 class="text-2xl font-bold text-white">Referral Tracking Shows Which Clients Bring in New Business</h3>
-            <p class="mt-4 text-gray-400">See which clients refer the most business and reward your best advocates automatically. Referral clients convert at higher rates — InkFlow tracks the full chain so you know exactly where new business comes from.</p>
+            <p class="mt-4 text-gray-400">See which clients refer the most business and reward your best advocates automatically. Referral clients convert at higher rates — InkFlow tracks the full chain.</p>
+            <h4 class="mt-4 text-lg font-semibold text-white">Full Referral Chain Tracking from Source to Booking</h4>
+            <p class="text-sm text-gray-400">Every new client is tagged with their referral source. Track conversion rates by referrer. See which clients send the most business over time.</p>
+            <h5 class="mt-3 text-base font-medium text-white">Automatic Reward Tiers Based on Referral Volume</h5>
+            <p class="text-sm text-gray-400">Set reward rules: 5 referrals → $50 studio credit, 10 referrals → free touch-up session. InkFlow tracks and notifies both parties automatically.</p>
+            <h6 class="mt-2 text-sm font-medium text-gray-400">Referral Client Conversion Rate: 40% Higher</h6>
+            <p class="text-sm text-gray-400">Referred clients book at 40% higher rate than organic leads. They arrive with trust already established — shorter sales cycle, higher average spend.</p>
           </div>
           <div class="rounded-xl bg-ink-900/50 border border-ink-800 p-8 text-center">
             <p class="text-sm text-gray-400">[Screenshot: Referral stats]</p>
@@ -137,10 +161,35 @@ import StudioHealthQuiz from '../../components/StudioHealthQuiz.astro';
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="border-t border-ink-800/50 py-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 space-y-4">
+      <h2 class="text-2xl font-bold text-white text-center">Frequently Asked Questions</h2>
+      <details class="rounded-xl border border-ink-800 p-4">
+        <summary class="cursor-pointer text-sm font-medium text-white">What client data does InkFlow CRM store?</summary>
+        <p class="mt-2 text-sm text-gray-400">Full client history — appointments, waivers, photos, payments, preferences, medical history, and referral sources. Searchable by name, phone, or email.</p>
+      </details>
+      <details class="rounded-xl border border-ink-800 p-4">
+        <summary class="cursor-pointer text-sm font-medium text-white">Can I segment clients by tattoo style?</summary>
+        <p class="mt-2 text-sm text-gray-400">Yes. Tag clients by style preference, visit frequency, or lifetime value. Filter and message specific groups in one click.</p>
+      </details>
+      <details class="rounded-xl border border-ink-800 p-4">
+        <summary class="cursor-pointer text-sm font-medium text-white">Does the CRM track referral sources automatically?</summary>
+        <p class="mt-2 text-sm text-gray-400">Yes. Every new client is tagged with their referral source. Track conversion rates by referrer and see who sends the most business.</p>
+      </details>
+      <details class="rounded-xl border border-ink-800 p-4">
+        <summary class="cursor-pointer text-sm font-medium text-white">How is InkFlow CRM different from HubSpot?</summary>
+        <p class="mt-2 text-sm text-gray-400">HubSpot needs heavy customization for tattoo studios. InkFlow understands tattoo workflows out of the box — photo storage per client, waiver tracking, aftercare automation.</p>
+      </details>
+    </div>
+  </section>
+
   <!-- CTA -->
   <section class="border-t border-ink-800/50 py-16 text-center">
     <h2 class="text-2xl font-bold text-white">Know Every Client. Never Use a Spreadsheet Again.</h2>
+    <p class="mt-3 text-gray-400">Free plan includes basic CRM with client history and tags.</p>
     <a href="https://app.ink-flows.com/register" class="mt-6 inline-block rounded-lg bg-accent-500 px-8 py-3.5 text-base font-semibold text-ink-950 hover:bg-accent-400 transition-all">Try InkFlow Free →</a>
+    <p class="mt-3 text-sm text-gray-600"><a href="/pricing" class="text-accent-400 hover:underline">Compare plans</a></p>
   </section>
   <Footer />
 </BaseLayout>

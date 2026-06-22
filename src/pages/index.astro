@@ -9,13 +9,13 @@ import FAQSchema from '../components/FAQSchema.astro';
 
 <BaseLayout>
   <SEOHead slot="head" title="Tattoo Studio Management Software" description="All-in-one tattoo studio platform. Booking, POS, CRM, digital waivers, inventory and aftercare in one app. Trusted by 500+ studios. Start free." />
-  <FAQSchema data={{ questions: [
+  <FAQSchema questions={[
     { question: "Is InkFlow really free for solo artists?", answer: "Yes. Our Free plan supports solo artists with basic booking and client management. No credit card required, no time limit. You can upgrade anytime." },
     { question: "Can I accept deposits through InkFlow?", answer: "Absolutely. InkFlow integrates with Stripe to collect deposits at the time of booking. Set any deposit amount — flat fee or percentage. This alone reduces no-shows by up to 80%." },
     { question: "Does InkFlow work on iPad?", answer: "Yes. InkFlow is a Progressive Web App that works on any device — iPhone, iPad, Android, and desktop. Artists can check clients in, sign waivers, and process payments all from an iPad at the front desk." },
     { question: "Can I have multiple artists on one account?", answer: "Yes. Our Pro plan supports up to 10 artists with individual calendars, commission tracking, and a shared client database. Each artist gets their own booking link." },
     { question: "Can I import my existing client data?", answer: "Yes. InkFlow supports CSV import for clients, appointments, and inventory. We also offer migration assistance for studios switching from other platforms." },
-  ]}} />
+  ]} />
   <Navbar />
 
   <!-- Hero -->
@@ -112,7 +112,7 @@ import FAQSchema from '../components/FAQSchema.astro';
           </div>
         </a>
         <!-- Payments / Deposits -->
-        <a href="/features/payments" class="group relative rounded-xl border border-ink-800 bg-ink-900/50 overflow-hidden hover:border-accent-500/30 transition-all">
+        <a href="/features/tattoo-payment-processing" class="group relative rounded-xl border border-ink-800 bg-ink-900/50 overflow-hidden hover:border-accent-500/30 transition-all">
           <div class="p-6 pb-0">
             <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400 ring-1 ring-accent-500/20">
               <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
@@ -135,7 +135,7 @@ import FAQSchema from '../components/FAQSchema.astro';
           </div>
         </a>
         <!-- Waivers -->
-        <a href="/features/waivers" class="group relative rounded-xl border border-ink-800 bg-ink-900/50 overflow-hidden hover:border-accent-500/30 transition-all">
+        <a href="/features/tattoo-waiver-software" class="group relative rounded-xl border border-ink-800 bg-ink-900/50 overflow-hidden hover:border-accent-500/30 transition-all">
           <div class="p-6 pb-0">
             <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400 ring-1 ring-accent-500/20">
               <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
@@ -158,7 +158,7 @@ import FAQSchema from '../components/FAQSchema.astro';
           </div>
         </a>
         <!-- CRM -->
-        <a href="/features/crm" class="group relative rounded-xl border border-ink-800 bg-ink-900/50 overflow-hidden hover:border-accent-500/30 transition-all">
+        <a href="/features/tattoo-crm-software" class="group relative rounded-xl border border-ink-800 bg-ink-900/50 overflow-hidden hover:border-accent-500/30 transition-all">
           <div class="p-6 pb-0">
             <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400 ring-1 ring-accent-500/20">
               <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -182,7 +182,7 @@ import FAQSchema from '../components/FAQSchema.astro';
           </div>
         </a>
         <!-- Inventory -->
-        <a href="/features/inventory" class="group relative rounded-xl border border-ink-800 bg-ink-900/50 overflow-hidden hover:border-accent-500/30 transition-all">
+        <a href="/features/tattoo-inventory-management" class="group relative rounded-xl border border-ink-800 bg-ink-900/50 overflow-hidden hover:border-accent-500/30 transition-all">
           <div class="p-6 pb-0">
             <div class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-accent-500/10 text-accent-400 ring-1 ring-accent-500/20">
               <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
