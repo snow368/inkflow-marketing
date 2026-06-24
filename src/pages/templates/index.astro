@@ -330,12 +330,19 @@ const LAYOUT_GROUPS = [
   async function generateSite() {
     const email = document.getElementById('fieldEmail').value.trim();
     const name = document.getElementById('fieldName').value.trim();
-    const ig = document.getElementById('fieldIG').value.trim();
-    const bio = document.getElementById('fieldBio').value.trim();
     if (!email || !name) { alert('Email and Studio Name are required'); return; }
     if (!selectedTemplate) { alert('Please select a template first'); return; }
 
     const btn = document.getElementById('generateBtn');
+    btn.disabled = true; btn.textContent = 'Generating Preview...';
+
+    // Just generate a preview — no registration needed
+    document.getElementById('previewFrame').src = 'https://ink-flow-api.inkflowapp.workers.dev/api/template-preview/' + selectedTemplate + '?accent=' + curColor;
+
+    document.getElementById('stepForm').classList.add('hidden');
+    document.getElementById('stepPreview').classList.remove('hidden');
+    btn.disabled = false; btn.textContent = 'Generate Free Preview →';
+  }
     btn.disabled = true; btn.textContent = 'Generating...';
 
     try {
