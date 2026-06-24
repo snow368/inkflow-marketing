@@ -225,8 +225,8 @@ const COLOR_PALETTES = {
 <script is:inline>
   let selKey = '', selName = '', selTier = 'free', selLayout = '', curColor = '';
 
-  const PAL = <JSON.stringify(COLOR_PALETTES) />;
-  const MAP = <JSON.stringify(Object.fromEntries(TEMPLATES.map(t => [t.key, t]))) />;
+  const PAL = {JSON.stringify(COLOR_PALETTES)};
+  const MAP = {JSON.stringify(Object.fromEntries(TEMPLATES.map(t => [t.key, t])))};
 
   window.selectTemplate = function(key, name, tier, layout) {
     selKey = key; selName = name; selTier = tier; selLayout = layout;
