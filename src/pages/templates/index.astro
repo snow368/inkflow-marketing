@@ -111,10 +111,6 @@ const GROUP_NAMES = { classic: 'Classic Scroll', 'hero-grid': 'Gallery Grid', 'l
 const GROUP_ICONS = { classic: '📜', 'hero-grid': '🖼️', 'link-bio': '🔗', 'studio-roster': '👥', cards: '🃏', split: '↔️', editorial: '📰', 'minimal-bar': '📱', 'gallery-focus': '🖼️', 'mobile-first': '📱', 'social-proof': '⭐', 'process-funnel': '🔄', 'full-experience': '🌟' };
 const PALETTES = { classic: ['#1a1a1a','#8b4513','#b8860b','#c4783a','#ff6688'], 'hero-grid': ['#d4a574','#2a8a8a','#2a7aaa','#e88d9a','#8a6aca'], 'link-bio': ['#ffffff','#d4d4d4','#ffee00','#cc2222','#666666'], 'studio-roster': ['#c41e1e','#4a8c3f','#cc9a4a','#5a9e6a','#ff7744'], cards: ['#ff0066','#00ffff','#9a9aaa','#ff00aa','#ff66cc'], split: ['#7c3aed','#4a80d0','#c8a040','#ff6622','#c4956a'], editorial: ['#800020','#cc3300','#b8862a','#ff2244','#ff6600'], 'minimal-bar': ['#4682b4','#ff6600','#e86a8a','#c0392b','#cc2244'], 'gallery-focus': ['#c0262d','#1a1a2e','#a67c52','#2a7a9a','#c49a6a'], 'mobile-first': ['#0099ff','#ff4488','#8a7a5a','#aaff00','#ff6b6b'], 'social-proof': ['#7a2a2a','#c89a40','#9a1a1a','#1a4a7a','#ff4488'], 'process-funnel': ['#cc2200','#9a1a1a','#2a8a3a','#cc4400','#aa2222'], 'full-experience': ['#6a5a4a','#2a2a2a','#c89a3a','#c89aaa','#4a4a4a'] };
 const GROUPS = Object.keys(GROUP_NAMES);
-const PAL_JSON = JSON.stringify(PALETTES);
-const T_JSON = JSON.stringify(TEMPLATES);
-const G_JSON = JSON.stringify(GROUP_NAMES);
-const GI_JSON = JSON.stringify(GROUP_ICONS);
 ---
 
 <BaseLayout>
@@ -194,8 +190,11 @@ const GI_JSON = JSON.stringify(GROUP_ICONS);
   <Footer />
 </BaseLayout>
 
-<script is:inline>
-const P={PAL_JSON},A={T_JSON},GN={G_JSON},GI={GI_JSON};
+<script is:inline define:vars={{ PALETTES, TEMPLATES, GROUP_NAMES, GROUP_ICONS }}>
+const P = PALETTES;
+const A = TEMPLATES;
+const GN = GROUP_NAMES;
+const GI = GROUP_ICONS;
 let k='',n='',ti='free',ly='',cc='';
 
 window.pick=function(key,name,tier,layout) {
