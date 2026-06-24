@@ -134,6 +134,11 @@ const PAL = {classic:['#1a1a1a','#8b4513','#b8860b','#c4783a','#ff6688'],'hero-g
           <h2 class="text-lg font-bold text-white">{GNAME[gk]}</h2>
           <span class="text-xs text-gray-500">({gs.length})</span>
         </div>
+        <div class="rounded-xl border border-ink-700 bg-ink-900/50 overflow-hidden mb-4">
+          <div class="h-48 sm:h-64 bg-ink-800/50 flex items-center justify-center">
+            <iframe src={`https://ink-flow-api.inkflowapp.workers.dev/api/template-preview/${gs[0].key}`} class="w-full h-full" loading="lazy" title={`${GNAME[gk]} preview`} style="pointer-events:none;border:none;" />
+          </div>
+        </div>
         <div class="flex flex-wrap gap-2">
           {gs.map(t => (
             <div class="color-swatch group relative flex items-center gap-1.5 rounded-xl border border-ink-700 bg-ink-900/30 px-3 py-2 hover:border-accent-500/50 hover:bg-ink-800/50 transition-all cursor-pointer"
