@@ -300,6 +300,7 @@ const LAYOUT_GROUPS = [
   function updatePreview(key, color) {
     var url = 'https://ink-flow-api.inkflowapp.workers.dev/api/template-preview/' + key;
     if (color) url += '?accent=' + encodeURIComponent(color);
+    url += (color ? '&' : '?') + '_t=' + Date.now();
     document.getElementById('previewFrame').src = url;
   }
 
